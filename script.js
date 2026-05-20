@@ -122,3 +122,30 @@ controlPairs.forEach(pair => {
 });
 
 updateApp();
+
+// ==========================================
+// PREMIUM HOOK LOGIC
+// ==========================================
+const modal = document.getElementById('premiumModal');
+const closeBtn = document.querySelector('.close-btn');
+const premiumElements = document.querySelectorAll('.premium-locked');
+
+// Open modal on click of any locked element
+premiumElements.forEach(el => {
+    el.addEventListener('click', (e) => {
+        e.preventDefault(); 
+        modal.style.display = 'flex';
+    });
+});
+
+// Close modal when X is clicked
+closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+// Close modal if user clicks outside the box
+window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.style.display = 'none';
+    }
+});
