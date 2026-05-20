@@ -8,14 +8,6 @@
             <h3>Velocity (Slope)</h3>
             <p id="velDisp" class="color-vel">$0/yr</p>
         </div>
-        <div class="stat-card">
-            <h3>Acceleration</h3>
-            <p id="accDisp" class="color-acc">$0/yr²</p>
-        </div>
-        <div class="stat-card">
-            <h3>Years to Target</h3>
-            <p id="targetDisp" class="color-target">--</p>
-        </div>
     </div>
 
     <div class="chart-container">
@@ -41,14 +33,6 @@
 
         <div class="slider-box">
             <div class="label-row">
-                <label class="label-text" for="infInput">Inflation Drag (%):</label>
-                <input type="number" id="infInput" class="num-input" min="0" max="10" step="0.1" value="2.5">
-            </div>
-            <input type="range" id="infSlider" min="0" max="10" step="0.1" value="2.5">
-        </div>
-
-        <div class="slider-box">
-            <div class="label-row">
                 <label class="label-text" for="principalInput">Initial Principal ($):</label>
                 <input type="number" id="principalInput" class="num-input" min="0" max="1000000" step="1000" value="0">
             </div>
@@ -61,14 +45,6 @@
                 <input type="number" id="depositInput" class="num-input" min="0" max="10000" step="100" value="2000">
             </div>
             <input type="range" id="depositSlider" min="0" max="10000" step="100" value="2000">
-        </div>
-
-        <div class="slider-box">
-            <div class="label-row">
-                <label class="label-text" for="targetInput">Target Wealth ($):</label>
-                <input type="number" id="targetInput" class="num-input" min="0" max="10000000" step="10000" value="1000000">
-            </div>
-            <input type="range" id="targetSlider" min="0" max="10000000" step="10000" value="1000000">
         </div>
     </div>
 </div>
