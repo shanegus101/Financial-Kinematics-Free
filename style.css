@@ -32,6 +32,8 @@ body {
 
 .color-pos { color: #4472c4; }
 .color-vel { color: #ed7d31; }
+.color-acc { color: #7030a0; }
+.color-target { color: #2ecc71; }
 
 .chart-container { position: relative; height: 400px; margin-bottom: 30px; }
 
@@ -117,3 +119,90 @@ input[type=range]::-webkit-slider-runnable-track {
     background: #dee2e6;
     border-radius: 3px;
 }
+
+/* =========================================
+   PREMIUM HOOK STYLES
+========================================= */
+
+.premium-locked {
+    opacity: 0.5;
+    cursor: pointer;
+    position: relative;
+    transition: opacity 0.2s ease;
+}
+
+.premium-locked:hover {
+    opacity: 0.8;
+}
+
+/* Intercept clicks from inputs inside locked elements */
+.premium-locked input, 
+.premium-locked h3, 
+.premium-locked p {
+    pointer-events: none; 
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background: white;
+    padding: 35px 40px;
+    border-radius: 12px;
+    max-width: 380px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    animation: modalSlideIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes modalSlideIn {
+    from { opacity: 0; transform: translateY(-30px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    color: #2d3748;
+}
+
+.modal-content p {
+    color: #4a5568;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px; right: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #a0aec0;
+    transition: color 0.2s;
+}
+
+.close-btn:hover { color: #2d3748; }
+
+.upgrade-btn {
+    background: #4472c4;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 1.05em;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    font-weight: 600;
+    width: 100%;
+}
+
+.upgrade-btn:hover { background: #2b6cb0; }
+.upgrade-btn:active { transform: scale(0.98); }
