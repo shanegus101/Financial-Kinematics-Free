@@ -210,8 +210,9 @@ input[type=range]::-webkit-slider-runnable-track {
 .premium-img {
     width: 100%;
     max-height: 200px; /* Limits height so the modal doesn't get too tall */
-    object-fit: cover; /* Keeps image proportions clean */
+    object-fit: contain; /* Keeps image proportions clean */
     border-radius: 8px;
     margin-bottom: 15px;
     border: 1px solid #e2e8f0;
+    background-color: #f8f9fa;
 }
