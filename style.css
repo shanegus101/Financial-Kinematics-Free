@@ -32,8 +32,6 @@ body {
 
 .color-pos { color: #4472c4; }
 .color-vel { color: #ed7d31; }
-.color-acc { color: #7030a0; }
-.color-target { color: #2ecc71; }
 
 .chart-container { position: relative; height: 400px; margin-bottom: 30px; }
 
