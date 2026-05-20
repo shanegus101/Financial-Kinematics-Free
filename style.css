@@ -206,3 +206,12 @@ input[type=range]::-webkit-slider-runnable-track {
 
 .upgrade-btn:hover { background: #2b6cb0; }
 .upgrade-btn:active { transform: scale(0.98); }
+
+.premium-img {
+    width: 100%;
+    max-height: 200px; /* Limits height so the modal doesn't get too tall */
+    object-fit: cover; /* Keeps image proportions clean */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #e2e8f0;
+}
