@@ -17,6 +17,14 @@
             <h3>Velocity (Slope)</h3>
             <p id="velDisp" class="color-vel">$0/yr</p>
         </div>
+        <div class="stat-card premium-locked">
+            <h3>Acceleration 🔒</h3>
+            <p class="color-acc">--/yr²</p>
+        </div>
+        <div class="stat-card premium-locked">
+            <h3>Years to Target 🔒</h3>
+            <p class="color-target">--</p>
+        </div>
     </div>
 
     <div class="chart-container">
@@ -55,6 +63,31 @@
             </div>
             <input type="range" id="depositSlider" min="0" max="10000" step="100" value="2000">
         </div>
+
+        <div class="slider-box premium-locked">
+            <div class="label-row">
+                <label class="label-text">Inflation Drag (%): 🔒</label>
+                <input type="number" class="num-input" step="0.1" value="3" disabled>
+            </div>
+            <input type="range" min="0" max="10" step="0.1" value="3" disabled>
+        </div>
+
+        <div class="slider-box premium-locked">
+            <div class="label-row">
+                <label class="label-text">Target Wealth ($): 🔒</label>
+                <input type="number" class="num-input" step="10000" value="1000000" disabled>
+            </div>
+            <input type="range" min="0" max="10000000" step="10000" value="1000000" disabled>
+        </div>
+    </div>
+</div>
+
+<div id="premiumModal" class="modal-overlay">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Unlock Premium</h2>
+        <p>Unlock deeper insights like historical inflation backtesting, Monte Carlo market volatility, and personalized target goals for <strong>$4.99/month</strong>.</p>
+        <button class="upgrade-btn">Upgrade Now</button>
     </div>
 </div>
 
